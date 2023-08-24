@@ -4,8 +4,7 @@
 }}
 
 <!DOCTYPE html>
-<html>
-
+<html>  
 	<head>
 		<title>
 			{{title}}
@@ -25,10 +24,9 @@
 		{{!-- Підключаємо файл скриптів layout --}}
 		<script src="dist/js/layout/default/index.js"></script>
 
+		
 		{{!-- Підключаємо файл стилів container --}}
-		<link href='dist/css/container/{{name}}/index.css' rel='stylesheet' />
-		{{!-- Підключаємо файл скриптів container --}}
-		<script src="dist/js/container/{{name}}/index.js"></script>
+	<link href='dist/css/container/{{name}}/index.css' rel='stylesheet' />
 
 		{{#each component}}
 			{{!-- Підключаємо файл стилів component --}}
@@ -36,14 +34,13 @@
 			{{!-- Підключаємо файл скриптів component --}}
 			<script src="dist/js/component/{{this}}/index.js"></script>
 		{{/each}}
-
 	</head>
 
 	<body>
-
 		{{!  ↓  ця кострукція показує куди шаблонізатору треба вставляти код з container файлу   }}
 		{{{body}}}
-
 	</body>
-
+	
+	{{!-- Підключаємо файл скриптів container --}}
+	<script src="dist/js/container/{{name}}/index.js"></script>
 </html>
